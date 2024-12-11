@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Calculator</title>
+  <link rel="stylesheet" href="skin.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <input type="text" id="result" readonly />
+    </div>
+    <div class="buttons">
+      <div class="row">
+        <button class="btn" onclick="clearAll()">AC</button>
+        <button class="btn" onclick="deleteLast()">DEL</button>
+        <button class="btn" onclick="appendSymbol('%')">%</button>
+        <button class="btn operator" onclick="appendSymbol('/')">÷</button>
+      </div>
+      <div class="row">
+        <button class="btn" onclick="appendSymbol('7')">7</button>
+        <button class="btn" onclick="appendSymbol('8')">8</button>
+        <button class="btn" onclick="appendSymbol('9')">9</button>
+        <button class="btn operator" onclick="appendSymbol('*')">×</button>
+      </div>
+      <div class="row">
+        <button class="btn" onclick="appendSymbol('4')">4</button>
+        <button class="btn" onclick="appendSymbol('5')">5</button>
+        <button class="btn" onclick="appendSymbol('6')">6</button>
+        <button class="btn operator" onclick="appendSymbol('-')">−</button>
+      </div>
+      <div class="row">
+        <button class="btn" onclick="appendSymbol('1')">1</button>
+        <button class="btn" onclick="appendSymbol('2')">2</button>
+        <button class="btn" onclick="appendSymbol('3')">3</button>
+        <button class="btn operator" onclick="appendSymbol('+')">+</button>
+      </div>
+      <div class="row">
+        <button class="btn zero" onclick="appendSymbol('0')">0</button>
+        <button class="btn" onclick="appendSymbol('.')">.</button>
+        <button class="btn equals" onclick="calculate()">=</button>
+      </div>
+    </div>
+    <div class="history">
+        <h2>Calculation History</h2>
+        <ul id="history-list">
+            <li>
+                <span class="equation">5 + 3</span>
+                <span class="result">= 8</span>
+            </li>
+            <li>
+                <span class="equation">10 / 2</span>
+                <span class="result">= 5</span>
+            </li>
+        </ul>
+    </div>
+    
+  </div>
+  <script src="muscle.js"></script>
+</body>
+</html>
